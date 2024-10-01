@@ -7,7 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 15.0f;
-    public GameObject = projectilePrefab
+    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +27,10 @@ public class NewBehaviourScript : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right*horizontalInput*Time.deltaTime*speed);
-        if (horizontalInput.GetkeyDown(KeyCode.Space))
+
+        if (horizontalInput.GetKeyDown(KeyCode.Space))
         {
-            
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
 }
