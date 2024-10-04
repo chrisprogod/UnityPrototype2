@@ -748,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal_Doe_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4264973240475872216, guid: 9c98f11e5e52b4acda38b5a98ca7a94b, type: 3}
+      propertyPath: lowerBound
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 7326361522010170753, guid: 9c98f11e5e52b4acda38b5a98ca7a94b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.75
@@ -898,6 +902,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4334537455256484605, guid: c960d49bffc584410aadba79d4b7a085, type: 3}
+      propertyPath: lowerBound
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 6003775988207129731, guid: c960d49bffc584410aadba79d4b7a085, type: 3}
       propertyPath: m_Name
       value: Animal_Moose_01
@@ -958,6 +966,10 @@ PrefabInstance:
     - target: {fileID: 1013328533885302043, guid: a1354b352072645baa25beef283f41ca, type: 3}
       propertyPath: m_Name
       value: Dog_GermanShepherd_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803979321251674924, guid: a1354b352072645baa25beef283f41ca, type: 3}
+      propertyPath: lowerBound
+      value: -14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
