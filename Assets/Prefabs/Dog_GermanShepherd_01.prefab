@@ -864,7 +864,7 @@ Transform:
   m_GameObject: {fileID: 896770105118133255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.032037117}
+  m_LocalPosition: {x: -1.76, y: -0.038, z: 0.032037117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -978,6 +978,8 @@ GameObject:
   - component: {fileID: 4303899818621977749}
   - component: {fileID: 2399180046905348122}
   - component: {fileID: 4803979321251674924}
+  - component: {fileID: 7933439518952645002}
+  - component: {fileID: 2291696960991172976}
   m_Layer: 0
   m_Name: Dog_GermanShepherd_01
   m_TagString: Untagged
@@ -1070,7 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fe7846e66f54d7992d72516e62294c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 13
 --- !u!114 &4803979321251674924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,6 +1083,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39afb2a70e4f54ae28786463f7fc92c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBound: 33
+  lowerBound: -14
+--- !u!65 &7933439518952645002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013328533885302043}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.06688895, y: 0.21019076, z: 0.26646185}
+  m_Center: {x: -0.0005322218, y: 0.104990594, z: 0.032519676}
+--- !u!114 &2291696960991172976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013328533885302043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621312a395e4b495db284821ea1a1012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1160644523906499453
