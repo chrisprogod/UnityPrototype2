@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
-    public int playerHealth = 3;
+    public int playerHealth = 5;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI gameOverText;
 
