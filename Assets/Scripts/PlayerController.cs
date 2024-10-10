@@ -9,10 +9,11 @@ public class NewBehaviourScript : MonoBehaviour
     public float speed = 10.0f;
     public float xRange = 15.0f;
     public GameObject projectilePrefab;
+    public AudioSource tickSound;
     // Start is called before the first frame update
     void Start()
     {
-  
+        tickSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            tickSound.Play();
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
