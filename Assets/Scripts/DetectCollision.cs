@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
+public AudioSource Punchsound;
     void Start()
     {
-        
+        Punchsound = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -16,9 +17,24 @@ public class DetectCollision : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other) 
+private void OnTriggerEnter(Collider other) 
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        // Check if the other object has the tag "Player"
+        if (other.CompareTag("Player"))
+        {
+            // Log a message if the player is hit
+            Debug.Log("Player has been hit!");
+            Punchsound.Play();
+            while(!Punchsound.isPlaying)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if(other.CompareTag("Steak"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }
