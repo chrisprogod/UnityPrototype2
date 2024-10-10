@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class DetectCollision : MonoBehaviour
 {
     public AudioSource Punchsound;
+    public HealthManager healthManager;
     void Start()
     {
         Punchsound = GetComponent<AudioSource>();
-
+        healthManager = GameObject.Find("HealthManager").GetComponent<HealthManager>();
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ private void OnTriggerEnter(Collider other)
             {
                 Destroy(gameObject);
             }
+            healthManager.TakeDamage();
         }
 
         if(other.CompareTag("Steak"))
