@@ -1122,6 +1122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Punchsound: {fileID: -8991907530267194055}
+  health: 0
+  numOfHearts: 0
+  hearts: []
+  fullHearts: {fileID: 0}
+  emptyHearts: {fileID: 0}
 --- !u!82 &-8991907530267194055
 AudioSource:
   m_ObjectHideFlags: 0

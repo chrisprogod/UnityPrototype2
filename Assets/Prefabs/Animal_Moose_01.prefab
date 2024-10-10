@@ -639,6 +639,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Punchsound: {fileID: -7969754860738464656}
+  health: 0
+  numOfHearts: 0
+  hearts: []
+  fullHearts: {fileID: 0}
+  emptyHearts: {fileID: 0}
 --- !u!82 &-7969754860738464656
 AudioSource:
   m_ObjectHideFlags: 0
