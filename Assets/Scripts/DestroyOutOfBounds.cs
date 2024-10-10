@@ -6,11 +6,12 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
     public float topBound = 33;
     public float lowerBound = -14;
+    public HealthManager healthManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        healthManager = GameObject.Find("HealthManager").GetComponent<HealthManager>();
     }
 
 
@@ -23,7 +24,8 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if (transform.position.z < lowerBound)
         {
-            Debug.Log("Game Over");
+            Debug.Log("Animal Escaped out of bounds.");
+            healthManager.TakeDamage();
             Destroy(gameObject);
         }
     }
