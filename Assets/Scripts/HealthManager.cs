@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
+    public PointManager pointManager;
     public int playerHealth = 5;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI gameOverText;
@@ -18,6 +19,7 @@ public class HealthManager : MonoBehaviour
     {
         UpdateHealthUI(); 
         gameOverText.gameObject.SetActive(false);
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
     }
 
     // reduce player health by 1
@@ -35,14 +37,15 @@ public class HealthManager : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        healthText.text = "Lives: " + playerHealth;
+        healthText.text = "" + playerHealth;
     }
 
     void GameOver()
     {
         gameIsOver = true;
-        gameOverText.gameObject.SetActive(true); 
-        Time.timeScale = 0f;  
+        gameOverText.gameObject.SetActive(true);
+        Time.timeScale = 0f; 
+        pointManager.ShowFinalText();
     }
 
     void Update()

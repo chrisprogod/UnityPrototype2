@@ -25,7 +25,7 @@ public class PointManager : MonoBehaviour
 
     void UpdatePointsUI()
     {
-        pointsText.text = "Points: " + points;
+        pointsText.text = "" + points;
         FinalScoreText.text = "Final score: " + points + " points";
     }
 

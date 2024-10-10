@@ -7,10 +7,12 @@ public class DetectCollision : MonoBehaviour
 {
     public AudioSource Punchsound;
     public HealthManager healthManager;
+    public PointManager pointManager;
     void Start()
     {
         Punchsound = GetComponent<AudioSource>();
         healthManager = GameObject.Find("HealthManager").GetComponent<HealthManager>();
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ private void OnTriggerEnter(Collider other)
 
         if(other.CompareTag("Steak"))
         {
+            pointManager.GetPoints();
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
