@@ -15,24 +15,14 @@ public class DetectCollision : MonoBehaviour
         pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 private void OnTriggerEnter(Collider other) 
     {
-        // Check if the other object has the tag "Player"
         if (other.CompareTag("Player"))
         {
-            // Log a message if the player is hit
             Debug.Log("Player has been hit!");
             Punchsound.Play();
-            while(!Punchsound.isPlaying)
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject, Punchsound.clip.length);
             healthManager.TakeDamage();
         }
 
